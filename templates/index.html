@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russia Sanctions Guidance Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇬🇧 UK Russia Sanctions Guidance</h1>
+            <p>AI-powered summary of the latest UK government sanctions guidance</p>
+        </header>
+        
+        <main>
+            <div class="action-section">
+                <button id="scrapeBtn" class="scrape-btn">
+                    <span class="btn-text">Generate Summary</span>
+                    <div class="spinner" style="display: none;"></div>
+                </button>
+                <p class="source-info">
+                    Source: <a href="https://www.gov.uk/government/publications/russia-sanctions-guidance/russia-sanctions-guidance" target="_blank" rel="noopener">
+                        gov.uk/government/publications/russia-sanctions-guidance
+                    </a>
+                </p>
+            </div>
+            
+            <div id="results" class="results" style="display: none;">
+                <div class="summary-header">
+                    <h2>📋 Summary</h2>
+                    <div class="meta-info">
+                        <span id="contentLength"></span>
+                        <span class="timestamp" id="timestamp"></span>
+                    </div>
+                </div>
+                <div id="summaryContent" class="summary-content"></div>
+            </div>
+            
+            <div id="error" class="error" style="display: none;">
+                <h3>❌ Error</h3>
+                <p id="errorMessage"></p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Powered by Gemini AI • Data from UK Government</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
