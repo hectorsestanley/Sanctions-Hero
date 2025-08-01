@@ -72,7 +72,7 @@ def scrape_sanctions_page():
 def generate_summary(content):
     """Generate summary using Gemini API"""
     try:
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel('gemini-1.5-flash')
         
         prompt = f"""
         Please provide a comprehensive summary of the following UK Russia sanctions guidance content. 
